@@ -1,0 +1,56 @@
+# Ruby .gitignore
+
+# Ruby specific
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.byebug_history
+
+# Bundle
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# Environment variables
+.env
+.env.*
+
+# Log files
+/log/*
+!/log/.keep
+/tmp/log/*
+!/tmp/log/.keep
+
+# Database
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-*
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ruby Version Manager
+.ruby-version
+.ruby-gemset
+
+# IDE files
+/.idea
+/.vscode
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
