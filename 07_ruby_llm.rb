@@ -1,6 +1,5 @@
 # https://rubyllm.com/
 # Section: Quick Start
-
 require 'ruby_llm'
 
 RubyLLM.configure do |config|
@@ -11,23 +10,25 @@ RubyLLM.configure do |config|
 end
 
 # Start chatting
-#llm_chat = RubyLLM.chat(model: 'claude-3-7-sonnet-20250219')
-#response = llm_chat.ask("Who are the 3 most recent US presidents?")
-#puts response.content
-#puts '---------------'
+#chat = RubyLLM.chat
+chat = RubyLLM.chat(model: 'claude-3-7-sonnet-20250219')
+response = chat.ask "Who are the 3 most recent US presidents?"
+puts response.content
+puts '---------------'
 
 # Analyze audio recordings
-# respone = lln_chat.with_model('gpt-4o-audio-preview').ask "Describe this meeting", with: { audio: "ruby.wav" }
+# respone = chat.with_model('gpt-4o-audio-preview').ask "Describe this meeting", with: { audio: "ruby.wav" }
 # puts response.content
 # puts '---------------'
 
 # Generate images
+puts "Generating a composite image of dog and cats, please wait..."
 image = RubyLLM.paint("a composite image of dog and cats")
-cmd = %Q(wget "#{image.url}" -O ruby_image.png)
+cmd = %Q(wget -q "#{image.url}" -O ruby_image.png)
 puts cmd; puts
 puts `#{cmd}`
+puts `open ruby_image.png`
 puts '---------------'
-`open ruby_image.png`
 
 # Analyze PDF documents with Claude
 # claude_chat = RubyLLM.chat(model: 'claude-3-7-sonnet-20250219')
