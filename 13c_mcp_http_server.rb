@@ -4,7 +4,8 @@ require 'mcp/server/transports/stdio_transport'
 require 'mcp/server/transports/streamable_http_transport'
 
 server = MCP::Server.new(name: "my_server")
-transport = MCP::Server::Transports::HTTP.new(server)
+transport = MCP::Server::Transports::StreamableHTTPTransport.new(server)
+
 server.transport = transport
 
 # When tools change, notify clients
