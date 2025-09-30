@@ -24,6 +24,7 @@ gem 'omniai-mistral'
 gem 'omniai-google'
 gem 'omniai-openai'
 gem 'ruby_llm'
+gem 'mpc'
 
 # gem 'torch-rb'
 # gem 'rumale-torch'
